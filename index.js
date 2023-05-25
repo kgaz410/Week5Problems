@@ -16,7 +16,7 @@
 //     }
 // ]
 
-
+// MINE
 // function declareTributes(list) {
 //     return list.name + " from District " + list.district
 // }
@@ -24,6 +24,30 @@
 // let newArray = listOfTributes.map(declareTributes)
 
 // console.log(newArray)
+
+// REVIEW SOLUTION OPTION 1
+// function declareTributes(listOfTributes){
+//     function writeTributeAcc (singleTribute) {
+//         let announcement = `${singleTribute.name} from District ${singleTribute.district}`
+//         return announcement
+//     }
+//     let tributeAccouncements = listOfTributes.map(writeTributeAcc)
+//     return tributeAccouncements
+// }
+
+// OR OPTION 2 ANONYMOUS FUNCTION EXPRESSION
+    // SYN: for an array looping methods inline callback function expression:
+        // nameOfYourArray.nameOfYourLoopingArrayMethod((nameOfSingularNounOfPluralArray) => {
+            // Write code here
+        // })
+
+// let tributeAccouncements = listOfTributes.map((tribute) => {
+//     let announcement = `${tribute.name} from District ${tribute.district}`
+//         return announcement
+
+// })
+
+
 
 // Your function should output a new array, where each element is a string written in this format:
 
@@ -46,30 +70,49 @@
 // which you can expect will be an array of objects, where each object is a toy's individual details. 
 // That parameter could receive an argument value like this:
 
-let toyInventory2023 = [
-    {
-        name: "Puzzle Game",
-        containsChemicals: true
-    },
-    {
-        name: "Fidget Spinner",
-        containsChemicals: true
-    },
-    {
-        name: "Teddy Bear",
-        containsChemicals: false
-    }
-]
+// let toyInventory2023 = [
+//     {
+//         name: "Puzzle Game",
+//         containsChemicals: true
+//     },
+//     {
+//         name: "Fidget Spinner",
+//         containsChemicals: true
+//     },
+//     {
+//         name: "Teddy Bear",
+//         containsChemicals: false
+//     }
+// ]
 
-function removeFaultyToys (toyInventory){
-    if(toyInventory.containsChemicals === false){
-        return toyInventory
-    }
+// function removeFaultyToys (toyInventory){
+//     if(toyInventory.containsChemicals === false){
+//         return toyInventory
+//     }
 
-}
+// }
 
-let goodToys = toyInventory2023.filter(removeFaultyToys)
-console.log(goodToys)
+// let goodToys = toyInventory2023.filter(removeFaultyToys)
+// console.log(goodToys)
+
+// REVIEW OPTION 1
+// function removeFaultyToys(toyInventory) {
+//     function doesThisToyContainChemicals(singelToy) {
+//         if(!singelToy.containsChemicals) {
+//             return singelToy
+//         }
+//     }
+//     let undamagedToys = toyInventory.filter(doesThisToyContainChemicals)
+//     return undamagedToys
+// }
+
+// OR OPTION 2
+// let undamagedToys = toyInventory.fitler((singelToy) => {
+//     if(!singelToy.containsChemicals) {
+//         return singelToy
+//     }
+//     return undamagedToys
+// })
 
 // Your function should return a new array with only the toys that do NOT contain any dangerous chemicals. 
 
